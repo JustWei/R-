@@ -56,4 +56,7 @@ d3<-c303 %>% group_by(学院) %>% summarise(三月=n())
 d4<-c304 %>% group_by(学院) %>% summarise(四月=n())
 p2<-ggplot(d3,aes(学院,交易次数,fill=factor(学院)))+geom_bar(stat="identity",width = 1)+coord_polar()+
   geom_text(aes(label=round(交易次数)),vjust=0,colour="black")
-ggplot(d3,aes(学院,交易次数,fill=mylabel))+geom_bar(stat="identity",width = 1)+coord_polar()+labs(x = "", y = "", title = "三月份各学院三月份交易量")+scale_fill_discrete()+geom_text(aes(label=round(交易次数)),vjust=0,colour="black",size=5)
+ggplot(d3,aes(学院,交易次数,fill=mylabel))+geom_bar(stat="identity",width = 1)+
+      coord_polar()+labs(x = "", y = "", title = "三月份各学院三月份交易量")+
+      scale_fill_discrete()+
+      geom_text(aes(label=round(交易次数)),vjust=0,colour="black",size=5)
